@@ -8,13 +8,13 @@ module.exports = {
     },
     'Enter Search': function(client) {
         client
-            .verify.elementPresent('input[id=' + client.globals.srchbxID + ']')
-            .setValue('input[id=' + client.globals.srchbxID + ']', client.globals.srchCrit)
-            .assert.valueContains('input[id=' + client.globals.srchbxID + ']', client.globals.srchCrit);
+            .verify.elementPresent(client.globals.srchbxID)
+            .setValue(client.globals.srchbxID, client.globals.srchCrit)
+            .assert.valueContains(client.globals.srchbxID, client.globals.srchCrit);
     },
     'Verify Search Results with Screen Shots': function(client) {
         client
-            .click('button[id=' + client.globals.srchbtnID + ']')
+            .click(client.globals.srchbtnID)
             .pause(1000);
 
         client.globals.TakeSS(client, 'BPA-75-search_results');
