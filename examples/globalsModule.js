@@ -9,28 +9,37 @@ module.exports = {
     /****************************/
     /****** Landing Page ********/
     /****************************/
-    srchbxID: 'search-box',
-    srchbtnID: 'search-button',
-    drgRclBtnID: 'drug-recall-button',
-    dvcRclBtnID: 'device-recall-button',
-    fdRclBtnID: 'food-recall-button',
+    srchbxID: '#search-box',
+    srchbtnID: '#search-button',
+    drgRclBtnID: '#drug-recall-button',
+    dvcRclBtnID: '#device-recall-button',
+    fdRclBtnID: '#food-recall-button',
+    helpBtnID: '#help-main-page',
 
     /****************************/
     /********* Sidebar **********/
     /****************************/
-    sbSrchBxID: 'search-button-sidebar',
-    sbSrchBtnID: 'sidebar-search-box',
+    sbSrchBxID: '#search-button-sidebar',
+    sbSrchBtnID: '#sidebar-search-box',
 
     /****************************/
     /****** Results Page ********/
     /****************************/
-    mnCntDivID: 'main_content',
+    mnCntDivID: '#main_content',
+    resultsTblID: '#recall-results-table',
 
 
     /****************************/
     /****** Details Page ********/
     /****************************/
 
+    /****************************/
+    /******* Help Modal *********/
+    /****************************/
+    helpModalID: '#myModal',
+    modalBodyCL: '.modal-body',
+    closeBtnCl: '.close',
+    helpIndexPgID: '#help-index-page',
 
     /****************************/
     /***** Global Fuctions ******/
