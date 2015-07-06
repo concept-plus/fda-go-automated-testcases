@@ -1,5 +1,5 @@
 {
-    "src_folders": ["./examples/test"],
+    "src_folders": ["./examples/tests"],
     "output_folder": "./examples/reports",
     "custom_commands_path": "./examples/custom-commands",
     "custom_assertions_path": "",

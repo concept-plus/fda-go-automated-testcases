@@ -1,0 +1,4 @@
+bower_components
+node_modules
+examples/reports/screenshots
+examples/reports/*.xml
