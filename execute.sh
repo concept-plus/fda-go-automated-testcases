@@ -22,6 +22,10 @@ echo "-------------------------"
 echo "  Clear Old Test Output  "
 echo "-------------------------"
 cd $WORKSPACE
+cd examples/test
+wget https://github.com/concept-plus/fda-go/tree/development/test/nightwatch/examples/tests
+
+cd $WORKSPACE
 ls examples/reports/*xml
 find examples/reports/ -maxdepth 1 -type f -name "*.xml" -delete
 ls examples/reports/*xml
