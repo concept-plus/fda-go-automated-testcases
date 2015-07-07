@@ -20,9 +20,10 @@
                 "on_failure": true
             },
             "desiredCapabilities": {
-                "browserName": "firefox",
+                "browserName": "phantomjs",
                 "javascriptEnabled": true,
-                "acceptSslCerts": true
+                "acceptSslCerts": true,
+                "phantomjs.binary.path": "phantomjs"
             }
         },
         "localmac": {
