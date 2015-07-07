@@ -17,8 +17,6 @@ module.exports = {
             .click(client.globals.srchbtnID)
             .verify.elementPresent('h1')
             .verify.containsText('h1',client.globals.srchCrit2);
-            // .pause(5000)
-            // .assert.elementPresent(client.globals.loadingIndicatorID);
         client.globals.TakeSS(client, 'BPA-70-search_results_loading_indicator');
     },
 

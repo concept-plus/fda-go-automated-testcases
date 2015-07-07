@@ -18,9 +18,6 @@ module.exports = {
             .click(client.globals.srchbtnID)
             .waitForElementPresent('#main-content h1', 1000)
             .verify.containsText('#main-content h1', client.globals.srchCrit2);
-            // .pause(100)
-            // .verify.elementPresent(client.globals.loadingIndicatorID)
-            // .pause(5000);
     },
 
     'Close Client': function(client) {

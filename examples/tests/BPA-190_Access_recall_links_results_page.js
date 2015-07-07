@@ -27,10 +27,6 @@ module.exports = {
 		    .click(client.globals.sidebarDeviceRecallBtnID)
             .pause(5000)
             .verify.elementPresent('#label-results-table tr');
-			// .verify.elementPresent('#dev')
-   //          .pause(5000)
-			// .verify.value('#main-content h1', client.globals.devRecallTxt)
-   //          .pause(1000);
 
         client.globals.TakeSS(client, 'BPA-190-device_recall_results');
     },
@@ -39,10 +35,6 @@ module.exports = {
 		    .click(client.globals.sidebarFoodRecallBtnID)
             .pause(5000)
             .verify.elementPresent('#recall-results-table tr');
-			// .verify.elementPresent('#main-content h1')
-   //          .pause(5000)
-			// .verify.containsText('#main-content h1',client.globals.fdRecallTxt)
-   //          .pause(1000);
 
         client.globals.TakeSS(client, 'BPA-190-food_recall_results');
     },
