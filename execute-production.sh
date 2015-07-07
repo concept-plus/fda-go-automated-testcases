@@ -1,5 +1,5 @@
 #!/bin/bash
-# My first script
+# Fire Production Tests
 
 echo "--------------------------------"
 echo "Jenkins Selenium Nightwatch Job!"
@@ -29,10 +29,10 @@ ls examples/reports/*xml
 echo "-------------------------"
 echo "     Fire Nightwatch     "
 echo "-------------------------"
-node nightwatch.js --env development
+node nightwatch.js --env production
 # job to configure nightwatch html reports
 echo "-------------------------"
 echo " Configure HTML Reports  "
 echo "-------------------------"
-nightwatch-html-reporter -d examples/reports -t default -o DEV-$BUILD_TAG.html
+nightwatch-html-reporter -d examples/reports -t default -o PROD-$BUILD_TAG.html
 #could then upload html file

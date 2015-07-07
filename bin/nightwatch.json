@@ -27,7 +27,7 @@
             }
         },
         "localmac": {
-            "launch_url": "http://127.0.0.1:9000",
+            "launch_url": "http://fdago-dev.conceptplusllc.net/#/",
             "silent": true,
             "selenium_port": 4444,
             "selenium_host": "localhost",
