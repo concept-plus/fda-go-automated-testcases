@@ -8,6 +8,7 @@ module.exports = {
     srchCrit4: 'Abacavir',
     srchCrit5: 'Motrin',
 	srchhdrtitle: 'Search Drug',
+    srchhdrtitleId: '#sidebar .search-title',
 	
     /****************************/
     /****** Landing Page ********/
@@ -24,8 +25,8 @@ module.exports = {
     /****************************/
     /********* Sidebar **********/
     /****************************/
-    sbSrchBxID: '#search-button-sidebar',
-    sbSrchBtnID: '#sidebar-search-box',
+    sbSrchBxID: '#sidebar #sidebar-search-box',
+    sbSrchBtnID: '#sidebar #search-button-sidebar',
     sidebarDrugRecallBtnID: '#sidebar #drug-recall-btn',
     sidebarDeviceRecallBtnID: '#sidebar #device-recall-btn',
     sidebarFoodRecallBtnID: '#sidebar #food-recall-btn',

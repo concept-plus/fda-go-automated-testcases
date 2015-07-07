@@ -17,39 +17,32 @@ module.exports = {
         client
             .click(client.globals.srchbtnID)
             .waitForElementPresent('#main-content h1', 1000)
-            .verify.containsText('#main-content h1', client.globals.srchCrit2)
-            .pause(100)
-            .verify.elementPresent(client.globals.loadingIndicatorID);
+            .verify.containsText('#main-content h1', client.globals.srchCrit2);
+            // .pause(100)
+            // .verify.elementPresent(client.globals.loadingIndicatorID)
+            // .pause(5000);
     },
 
     'Verify Search header is getting displayed on the side panel': function(client) {
         client
-            .useXpath()
-            .verify.containsText('//div/div/div/div/div/h3', client.globals.srchhdrtitle);
+            .verify.containsText('#sidebar .search-title', client.globals.srchhdrtitle);
         // pause(1000);
     },
 
     'Enter drug brand in search panel': function(client) {
         client
-
-            .useXpath()
-            .setValue('//div/div/div/div/div[2]/form/input', client.globals.srchCrit4)
-            .click('//div/div/div/div/div[2]/form/button')
+            .setValue(client.globals.sbSrchBxID, client.globals.srchCrit4)
+            .click(client.globals.sbSrchBtnID)
             .useCss() //Repointing to the default locator
             .verify.containsText('h1', client.globals.srchCrit4)
-
-
     },
 
     'Enter drug substance in search panel': function(client) {
         client
-
-            .useXpath()
-            .setValue('//div/div/div/div/div[2]/form/input', client.globals.srchCrit3)
-            .click('//div/div/div/div/div[2]/form/button')
+            .setValue(client.globals.sbSrchBxID, client.globals.srchCrit3)
+            .click(client.globals.sbSrchBtnID)
             .useCss()
             .verify.containsText('h1', client.globals.srchCrit3)
-
     },
 
 
