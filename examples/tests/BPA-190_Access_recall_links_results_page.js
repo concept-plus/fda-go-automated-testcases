@@ -24,33 +24,35 @@ module.exports = {
 
         client.globals.TakeSS(client, 'BPA-190-verify_recall_links');
     },
-	'Click on Drug recalls button and verify drug results come up': function(client) {
+    'Click on Drug recalls button and verify drug results come up': function(client) {
         client
-		    .click(client.globals.sidebarDrugRecallBtnID)
-            .pause(2000)
-			.verify.elementPresent('#main-content h1')
-            .verify.containsText('#main-content h1',client.globals.drgRecallTxt)
-            //.pause(1000);
+            .click(client.globals.sidebarDrugRecallBtnID)
+            .pause(5000)
+            .verify.elementPresent('#event-results-table tr');
 
         client.globals.TakeSS(client, 'BPA-190-drug_recall_results');
     },
 	'Click on Device recalls button and verify devices results come up': function(client) {
         client
 		    .click(client.globals.sidebarDeviceRecallBtnID)
-            .pause(2000)
-			.verify.elementPresent('#main-content h1')
-			.verify.containsText('#main-content h1',client.globals.devRecallTxt)
-            //.pause(1000);
+            .pause(5000)
+            .verify.elementPresent('#label-results-table tr');
+			// .verify.elementPresent('#dev')
+   //          .pause(5000)
+			// .verify.value('#main-content h1', client.globals.devRecallTxt)
+   //          .pause(1000);
 
         client.globals.TakeSS(client, 'BPA-190-device_recall_results');
     },
 	'Click on food recalls button and verify food come up': function(client) {
         client
 		    .click(client.globals.sidebarFoodRecallBtnID)
-            .pause(2000)
-			.verify.elementPresent('#main-content h1')
-			.verify.containsText('#main-content h1',client.globals.fdRecallTxt)
-            //.pause(1000);
+            .pause(5000)
+            .verify.elementPresent('#recall-results-table tr');
+			// .verify.elementPresent('#main-content h1')
+   //          .pause(5000)
+			// .verify.containsText('#main-content h1',client.globals.fdRecallTxt)
+   //          .pause(1000);
 
         client.globals.TakeSS(client, 'BPA-190-food_recall_results');
     },
