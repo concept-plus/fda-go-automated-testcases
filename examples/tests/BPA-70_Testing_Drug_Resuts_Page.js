@@ -9,15 +9,17 @@ module.exports = {
     'Enter Search': function(client) {
         client
             .verify.elementPresent(client.globals.srchbxID)
-            .setValue(client.globals.srchbxID, client.globals.srchCrit)
-            .assert.valueContains(client.globals.srchbxID, client.globals.srchCrit);
+            .setValue(client.globals.srchbxID, client.globals.srchCrit2)
+            .assert.valueContains(client.globals.srchbxID, client.globals.srchCrit2);
     },
-    'Verify Search Results with Screen Shots': function(client) {
+    'Verify Loading Indicator with Screen Shots': function(client) {
         client
             .click(client.globals.srchbtnID)
-            .pause(1000);
-
-        client.globals.TakeSS(client, 'BPA-75-search_results');
+            .verify.elementPresent('h1')
+            .verify.containsText('h1',client.globals.srchCrit2)
+            .pause(5000)
+            .assert.elementPresent(client.globals.loadingIndicatorID);
+        client.globals.TakeSS(client, 'BPA-70-search_results_loading_indicator');
     },
 
     'Close Client': function(client) {
