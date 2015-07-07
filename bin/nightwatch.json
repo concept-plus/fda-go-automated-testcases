@@ -14,8 +14,6 @@
             "launch_url": "http://fdago-dev.conceptplusllc.net/#/",
             "live_output": true,
             "silent": true,
-            "selenium_port": 32769,
-            "selenium_host": "http://ec2-54-152-195-225.compute-1.amazonaws.com",
             "screenshots": {
                 "enabled": true,
                 "path": "./examples/reports/",
