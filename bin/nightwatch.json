@@ -45,10 +45,11 @@
         },
         "production": {
             "launch_url": "http://fdago.conceptplusllc.net/#/",
+            "live_output": true,
             "silent": true,
             "screenshots": {
                 "enabled": true,
-                "path": "./examples/reports/screenshots/",
+                "path": "./examples/reports/",
                 "on_failure": true
             },
             "desiredCapabilities": {
