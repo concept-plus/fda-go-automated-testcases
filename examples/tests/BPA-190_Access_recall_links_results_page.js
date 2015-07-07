@@ -15,6 +15,15 @@ module.exports = {
         client.globals.TakeSS(client, 'BPA-190- recall_links_mainpage');
    },
    
+    'Click on Device recalls button and verify devices results come up': function(client) {
+        client
+            .click(client.globals.sidebarDeviceRecallBtnID)
+            .pause(5000)
+            .verify.elementPresent('#label-results-table tr');
+
+        
+    },
+
 
     'Close Client': function(client) {
         client.end();
