@@ -14,16 +14,6 @@ module.exports = {
 			.click(client.globals.srchbtnID)
         client.globals.TakeSS(client, 'BPA-190- recall_links_mainpage');
    },
-    'Verify recall links are on results page': function(client) {
-        client
-		    .assert.urlContains(client.globals.srchCrit5)
-            .verify.elementPresent(client.globals.sidebarDrugRecallBtnID)
-			.verify.elementPresent(client.globals.sidebarDeviceRecallBtnID)
-			.verify.elementPresent(client.globals.sidebarFoodRecallBtnID)
-            .pause(1000);
-
-        client.globals.TakeSS(client, 'BPA-190-verify_recall_links');
-    },
     'Click on Drug recalls button and verify drug results come up': function(client) {
         client
             .click(client.globals.sidebarDrugRecallBtnID)
