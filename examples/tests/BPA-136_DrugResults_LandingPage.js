@@ -16,7 +16,9 @@ module.exports = {
     'Verify Search term displayed on page': function(client) {
         client
             .click(client.globals.srchbtnID)
+            .pause(5000)
             .waitForElementPresent('#main-content h1', 1000)
+            .pause(5000)
             .verify.containsText('#main-content h1', client.globals.srchCrit2);
             // .pause(100)
             // .verify.elementPresent(client.globals.loadingIndicatorID)
@@ -25,6 +27,7 @@ module.exports = {
 
     'Verify Search header is getting displayed on the side panel': function(client) {
         client
+            .pause(5000)
             .verify.containsText('#sidebar .search-title', client.globals.srchhdrtitle);
         // pause(1000);
     },
@@ -33,6 +36,7 @@ module.exports = {
         client
             .setValue(client.globals.sbSrchBxID, client.globals.srchCrit4)
             .click(client.globals.sbSrchBtnID)
+            .pause(5000)
             .useCss() //Repointing to the default locator
             .verify.containsText('h1', client.globals.srchCrit4)
     },
@@ -41,6 +45,7 @@ module.exports = {
         client
             .setValue(client.globals.sbSrchBxID, client.globals.srchCrit3)
             .click(client.globals.sbSrchBtnID)
+            .pause(5000)
             .useCss()
             .verify.containsText('h1', client.globals.srchCrit3)
     },
